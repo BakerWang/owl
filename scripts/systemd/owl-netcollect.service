@@ -1,0 +1,15 @@
+[Unit]
+Description=owl-netcollect
+After=network.target
+
+[Service]
+ExecStart=/usr/local/owl-netcollect/netcollect
+Type=simple
+PIDFile=/usr/local/owl-netcollect/netcollect.pid
+Restart=always
+RestartSec=5
+StandardOutput=null
+LimitNOFILE=65535
+
+[Install]
+WantedBy=default.target
